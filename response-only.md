@@ -8,9 +8,7 @@ use DataTables;
 Route::get('user-data', function() {
 	$model = App\User::query();
 
-	return DataTables::eloquent($model)
-				->only(['id','name'])
-				->toJson();
+	return DataTables::eloquent($model)->only(['id','name'])->toJson();
 });
 ```
 
